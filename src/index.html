@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Honk&family=Sixtyfour&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <p class="gameName">Rock Paper Scissors</p>
+    <div><button class="move-button" onclick="
+      playGame('rock');
+    "><img class="move-icon" src="rock-emoji.png"></button>
+
+    <button class="move-button"  onclick="
+      playGame('paper');
+    "><img class="move-icon" src="paper-emoji.png"></button>
+
+    <button class="move-button" onclick="
+      playGame('scissors');
+    "><img class="move-icon" src="scissors-emoji.png"></button>
+</div>
+    <p class="js-result result"></p>
+    <p class="js-moves moves"><img class="hidden" src="rock-emoji.png" alt=""><img class="hidden" src="scissors-emoji.png" alt=""></p>
+    <p class="js-score score"></p>
+
+    <button class="resetButton" onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      localStorage.removeItem('score');
+      updateScoreElement()
+    ">Reset Score</button>
+
+    <script defer src="js/main.js"></script>
+  </body>
+</html>
